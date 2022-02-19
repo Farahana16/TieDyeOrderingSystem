@@ -8,6 +8,7 @@
 <%@page import="java.text.DecimalFormat" %>
 <%@page import="db.ConnectionManager" %>
 <!DOCTYPE html>
+
 <%
 	int productID = 0;
 	String productImages = null;
@@ -23,6 +24,7 @@
 	String image = null;
 	DecimalFormat format = new DecimalFormat("0.00");
 %>
+
 <html>
 <head>
 <title>Homepage</title>
@@ -196,6 +198,5 @@
 			alert("Item add to cart!");
        	}
     </script>
-
 </body>
 </html>
