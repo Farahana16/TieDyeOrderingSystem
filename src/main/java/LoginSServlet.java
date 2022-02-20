@@ -68,12 +68,7 @@ public class LoginSServlet extends HttpServlet {
             	//response.sendRedirect("loginBuyer.jsp"); //patut ke buat new page? utk login kalau dia ada error, sbb ni nnti dia direct je hahaha
             }
             
-        }
-		
-		catch (ClassNotFoundException e) {
-			e.printStackTrace();
-        } 
-		
+        }	
 		catch (SQLException e) {
             e.printStackTrace();
         }
