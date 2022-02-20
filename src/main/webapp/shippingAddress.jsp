@@ -4,6 +4,7 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="db.ConnectionManager"%>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
  	<head>
@@ -26,8 +27,8 @@
 		    <div class="row">
 			    <div class="column">
 			     	 <%
-		      			//String ID = session.getAttribute("SES_ID");
-			     		Connection con = ConnectionManager.getConnection();   							
+		      				//String ID = session.getAttribute("SES_ID");
+			     			Connection con = ConnectionManager.getConnection();   							
 						Statement statement = con.createStatement();
 						String sql ="select * from customer c join shippingaddress s on c.custID = s.custID where c.custID = '"+session.getAttribute("SES_ID")+ "'";
 						ResultSet resultSet = statement.executeQuery(sql);
