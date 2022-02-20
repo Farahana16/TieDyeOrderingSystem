@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import db.ConnectionManager;
 
 /**
  * Servlet implementation class LoginBServlet
@@ -55,9 +56,7 @@ public class LoginSServlet extends HttpServlet {
 		out.print("</body></html>");
 		
 		try {
-            Class.forName("org.postgresql.Driver");
-            
-            Connection conn = DriverManager.getConnection("jdbc:postgresql://ec2-52-44-31-100.compute-1.amazonaws.com:5432/dffi4qvj2t1gsg","zssxxvgezboosc","260fd48ce298fbfd1a64f11a94813c5489c0e65e5c5d3dafbfb139e813b1c462");
+            Connection conn = ConnectionManager.getConnection();
             Statement st = conn.createStatement();
            
             ResultSet sql = st.executeQuery("SELECT * FROM seller WHERE sEmail = '" + email + "' AND passw = '" + password + "'");
