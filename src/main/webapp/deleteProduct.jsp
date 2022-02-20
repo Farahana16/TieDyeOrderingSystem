@@ -6,7 +6,7 @@
 	try
 	{
 	Connection con = ConnectionManager.getConnection();    
-	Statement st=conn.createStatement();
+	Statement st=con.createStatement();
 	int i=st.executeUpdate("DELETE FROM product WHERE productid="+productid);
 	response.sendRedirect("productTable.jsp");
 	}
