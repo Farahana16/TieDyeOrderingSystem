@@ -41,7 +41,7 @@
 
 			while(resultSet.next()){
 				int productid = resultSet.getInt("productid");
-				ps = con.prepareStatement("INSERT INTO orderdetails(productid, orderid) VALUES(?, order_id_seq.currval)");
+				ps = con.prepareStatement("INSERT INTO orderdetails(productid, orderid) VALUES(?, LAST_INSERT_ID)");
 				ps.setInt(1, productid);
 				ps.executeUpdate();
 			}
@@ -50,7 +50,7 @@
 			ps.executeUpdate();
 			
 			statement = con.createStatement();
-			sql = "SELECT order_id_seq.currval as orderID from dual";
+			sql = "SELECT LAST_INSERT_ID as orderID from dual";
 			resultSet = statement.executeQuery(sql);
 			
 			if(resultSet.next()){
