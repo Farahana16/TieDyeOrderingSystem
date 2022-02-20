@@ -3,6 +3,7 @@
 <%@page import="java.util.*"%>
 <%@page import="adminregister.db.ConnectionManager"%>
 <%@page import="adminregister.model.adminregister"%>
+<%@page import="db.ConnectionManager" %>
 <!DOCTYPE html>
 <html>
 	<body>
@@ -10,11 +11,10 @@
 			String username = request.getParameter("username");
 			String pass = request.getParameter("pass");
 			try{ 
-				//load the driver class  
-				Class.forName("oracle.jdbc.driver.OracleDriver"); 
+				
 				
 				//create the connection object 
-				Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE ", "tco","system"); 
+				Connection con=DriverManager.getConnection(); 
 				//create the statement object 
 				Statement stmt=con.createStatement(); 
 				String sql = "SELECT * FROM admin WHERE adminusername = '" + username + "' AND adminpwd = '" + pass + "'";
