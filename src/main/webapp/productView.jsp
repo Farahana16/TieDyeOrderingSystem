@@ -57,7 +57,7 @@
 					</div>
 
 					<div class="form-wrapper">
-						<p style="font-size:2vw">Price :  RM  <%=resultSet.getInt("productprice") %></p>
+						<p style="font-size:2vw">Price :  RM  <%=resultSet.getDouble("productprice") %></p>
 						<br>
 					</div>
 
