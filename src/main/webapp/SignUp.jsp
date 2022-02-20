@@ -56,7 +56,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 				</div>
 				
 				<div class="wrap-input100 validate-input m-b-20" data-validate="Enter your phone number">
-					<input class="input100" type="text" name="phoneNumber" pattern="[0-9]{10/11}" placeholder="Phone Number" required>
+					<input class="input100" type="text" name="phoneNumber" min=10 max=11 placeholder="Phone Number" required>
 					<span class="focus-input100"></span>
 				</div>
 
