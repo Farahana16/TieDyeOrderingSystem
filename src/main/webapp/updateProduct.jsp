@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ page import="java.sql.*" %>
-<%! String driverName = "oracle.jdbc.driver.OracleDriver";%>
-<%!String url = "jdbc:oracle:thin:@localhost:1521:XE";%>
-<%!String user = "tco";%>
-<%!String psw = "system";%>
+<%@page import="db.ConnectionManager" %>
 <%
 	String productid = request.getParameter("productid");
 	String productname=request.getParameter("productname");
@@ -18,8 +15,7 @@
 	int personID = Integer.parseInt(productid);
 	try
 	{
-	Class.forName(driverName);
-	con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE ", "tco","system");
+	Connection con = ConnectionManager.getConnection();     
 	String sql="Update product set productid=?,productname=?,productsize=?,productprice=?,productdesc=?,productimages=? where productid="+productid;
 	ps = con.prepareStatement(sql);
 	ps.setString(1,productid);
