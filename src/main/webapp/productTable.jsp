@@ -161,7 +161,7 @@
 						<tbody>
 						<%
 						try{
-						connection = DriverManager.getConnection();
+						connection = ConnectionManager.getConnection();      
 						statement=connection.createStatement();
 						String sql ="select * from product";
 						resultSet = statement.executeQuery(sql);
