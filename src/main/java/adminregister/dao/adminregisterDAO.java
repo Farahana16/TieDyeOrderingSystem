@@ -10,7 +10,7 @@ package adminregister.dao;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import adminregister.db.ConnectionManager;
+import db.ConnectionManager;
 import adminregister.model.adminregister;
 
 
