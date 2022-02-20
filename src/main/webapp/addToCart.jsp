@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%> 
 <%@page import="java.sql.*" %>
-<<%@page import="db.ConnectionManager"%>
+<%@page import="db.ConnectionManager"%>
 
 
 <!DOCTYPE html>
@@ -11,10 +11,7 @@
 			String connectionUrl = "jdbc:oracle:thin:@localhost:1521:XE ";
 			String userid = "taka2";
 			String password = "system";
-			try{ 
-				//load the driver class  
-				Class.forName(driver); 
-				
+			try{  				
 				//create the connection object 
 				Connection con = DriverManager.getConnection(); 
 				int productID = Integer.parseInt(request.getParameter("productID"));
