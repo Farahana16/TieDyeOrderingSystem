@@ -7,6 +7,7 @@
 <%@page import="java.sql.Connection"%>
 <%@page import="java.text.DecimalFormat" %>
 <%@page import="db.ConnectionManager" %>
+<@page import="java.lang.*"%>
 
 <!DOCTYPE html>
 
