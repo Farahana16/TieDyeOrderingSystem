@@ -6,6 +6,7 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.text.DecimalFormat" %>
+<%@page import="db.ConnectionManager" %>
 <!DOCTYPE html>
 <%
 	String driver = "oracle.jdbc.driver.OracleDriver";
