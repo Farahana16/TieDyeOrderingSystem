@@ -16,7 +16,8 @@
 	try
 	{
 	Connection con = ConnectionManager.getConnection();     
-
+	String sql="Update product set productid=?,productname=?,productsize=?,productprice=?,productdesc=?,productimages=? where productid="+productid;
+	ps = con.prepareStatement(sql);
 	ps = con.prepareStatement(sql);
 	ps.setString(1,productid);
 	ps.setString(2, productname);
