@@ -165,12 +165,12 @@
 						%>
 								<tr>
 									<td class="column2"><%=resultSet.getInt("orderID") %></td>
-									<td class="column2"><%=resultSet.getString("orderDate") %></td>
+									<td class="column2"><%=resultSet.getDate("orderDate") %></td>
 									<td class="column2"><%=resultSet.getDouble("orderTotalPrice") %></td>
 									<td class="column2"><%=resultSet.getInt("custID") %></td>
 									<td class="column3"><%=resultSet.getInt("adminID") %></td>
 									<td class="column4">
-										<a href="orderUpdate.jsp?orderid=<%=resultSet.getInt("orderid") %>"><button class="btn"><i class="fa fa-pencil"></i></button></a>
+										<a href="orderUpdate.jsp?orderid=<%=resultSet.getInt("orderID") %>"><button class="btn"><i class="fa fa-pencil"></i></button></a>
 									</td>
 								</tr>
 						<%
