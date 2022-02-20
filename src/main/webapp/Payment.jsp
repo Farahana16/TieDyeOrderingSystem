@@ -5,6 +5,7 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
+<%@page import="db.ConnectionManager"%>
 
 <!DOCTYPE html>
 <% int custID = Integer.parseInt(request.getParameter("custID")); %>
@@ -44,7 +45,7 @@
                         	}
                         	
                         	try{
-                        		con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE ", "taka2", "system");              
+                        		con = ConnectionManager.getConnection();              
                         		Statement stmt = con.createStatement();
                         		String sql = "SELECT ordertotalPrice FROM ORDERR WHERE orderid= '" +orderID+"'";
 								rs = stmt.executeQuery(sql);
