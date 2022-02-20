@@ -31,15 +31,21 @@
 			ps.setDouble(1,totalPrice);
 			ps.setInt(2,custID);
 			ps.executeUpdate();
+			
+			statement = con.createStatement();
+			String sql = "SELECT LAST_INSERT_ID";
+			resultSet = statement.executeQuery(sql);
+			int orderID = resultSet.getInt("LAST_INSERT_ID");
 			 
 			statement = con.createStatement();
-			String sql = "SELECT productid from cartitems WHERE custid ='"+custID+"'";
+			sql = "SELECT productid from cartitems WHERE custid ='"+custID+"'";
 			resultSet = statement.executeQuery(sql);
 			
 			while(resultSet.next()){
 				int productid = resultSet.getInt("productid");
-				ps = con.prepareStatement("INSERT INTO orderdetails(productid, orderid) VALUES(?, LAST_INSERT_ID)");
+				ps = con.prepareStatement("INSERT INTO orderdetails(productid, orderid) VALUES(?,?)");
 				ps.setInt(1, productid);
+				ps.setInt(2, orderid):
 				ps.executeUpdate();
 			}
 			
