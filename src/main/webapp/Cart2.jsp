@@ -7,6 +7,7 @@
 <%@page import="java.sql.Connection"%>
 <%@page import="java.text.DecimalFormat" %>
 <%@page import="db.ConnectionManager" %>
+
 <!DOCTYPE html>
 <%
 	String driver = "oracle.jdbc.driver.OracleDriver";
@@ -60,7 +61,7 @@
             <table>
                 <%
                     try{
-                    	con = DriverManager.getConnection(connectionUrl, userid, password);
+                    	Connection con = ConnectionManager.getConnection();
                         statement = con.createStatement();
                         String sql ="SELECT c.*, p.* from customer c join cartitems ca on ca.custID = c.custID join product p on ca.productID = p.productID where c.custID = '"+custID+"'";
                         resultSet = statement.executeQuery(sql);
@@ -79,9 +80,7 @@
                    			shippingAddress = resultSet.getString("custshippingAddress");
                    			shippingPoscode = resultSet.getString("custshippingPoscode");
                    			shippingCity = resultSet.getString("custshippingCity");
-                   			shippingState = resultSet.getString("custshippingState");*/
-                   			
-                   			
+                   			shippingState = resultSet.getString("custshippingState");
                    			
                 %>
                 <tr>
