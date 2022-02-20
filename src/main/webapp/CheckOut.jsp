@@ -5,8 +5,7 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.sql.*"%>
-<%@page import="db.ConnectionManager" %>   
-<%@page import="java.io.PrintWriter" %>  
+<%@page import="db.ConnectionManager" %>    
 <%
 	Connection con  = null;
 	Statement statement = null;
@@ -27,14 +26,11 @@
 		double totalPrice = Double.parseDouble(request.getParameter("totalPrice"));
 		int custID = Integer.parseInt(request.getParameter("custID"));
 		int orderID = 0;
-		PrintWriter out = response.getWriter():
-		
 		try{
 			con = ConnectionManager.getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO orderr(ordedate, ordertotalprice, custid) VALUES (SYSDATE(),?,?)");   
 			ps.setDouble(1,totalPrice);
 			ps.setInt(2,custID);
-			out.print("Sini");
 			ps.executeUpdate();
 			 
 			statement = con.createStatement();
@@ -59,7 +55,6 @@
 				orderID = resultSet.getInt("orderID");
 			}
 			
-			out.print("Sini2");
 			response.sendRedirect("Payment.jsp?orderID=" + orderID +"&custID=" +custID);
 		}catch(Exception e){
 				System.out.println(e);
