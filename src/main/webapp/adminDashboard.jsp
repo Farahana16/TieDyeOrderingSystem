@@ -6,18 +6,10 @@
 		<%@page import="java.sql.ResultSet"%>
 		<%@page import="java.sql.Statement"%>
 		<%@page import="java.sql.Connection"%>
+		<%@page import="db.ConnectionManager"%>
 		<%
 		String adminid = request.getParameter("adminid");
-		String driver = "oracle.jdbc.driver.OracleDriver";
-		String connectionUrl = "jdbc:oracle:thin:@localhost:1521:XE ";
-		String database = "tco";
-		String userid = "tco";
-		String password = "system";
-		try {
-		Class.forName(driver);
-		} catch (ClassNotFoundException e) {
-		e.printStackTrace();
-		}
+
 		Connection connection = null;
 		Statement statement = null;
 		ResultSet resultSet = null;
@@ -104,7 +96,7 @@
 <body>
 	<%
 						try{
-						connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE ", "tco","system");
+						connection = ConnectionManager.getConnection();
 						statement=connection.createStatement();
 						String sql ="select * from ordert";
 						resultSet = statement.executeQuery(sql);
