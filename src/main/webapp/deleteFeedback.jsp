@@ -7,7 +7,7 @@
 	{
 	Connection conn = ConnectionManager.getConnection();
 	Statement st=conn.createStatement();
-	int i=st.executeUpdate("DELETE FROM feedback WHERE feedbackid="+feedbackid);
+	int i=st.executeUpdate("DELETE FROM feedbacks WHERE feedbackid="+feedbackid);
 	response.sendRedirect("feedbackTable.jsp");
 	}
 	catch(Exception e)
