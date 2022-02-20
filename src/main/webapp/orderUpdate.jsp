@@ -16,9 +16,9 @@
 		%>
 		<%
 		try{
-		Connection con = ConnectionManager.getConnection();      
+		Connection conn = ConnectionManager.getConnection();      
 		statement=connection.createStatement();
-		String sql ="select * from ordert where orderid="+orderid;
+		String sql ="select * from orderr where orderid="+orderid;
 		resultSet = statement.executeQuery(sql);
 		while(resultSet.next()){
 		%>
@@ -74,7 +74,7 @@
 			
 			<%
 			}
-			connection.close();
+			conn.close();
 			} catch (Exception e) {
 			e.printStackTrace();
 			}
