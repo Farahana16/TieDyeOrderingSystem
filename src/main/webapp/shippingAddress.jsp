@@ -71,8 +71,9 @@
                     	<form action="addAddressProcess.jsp" method="post">  
 			    		<div class="user-details">
 			    			                               
-		                    <input type="hidden" name="shipping" value="S">                    
-
+		                    <input type="hidden" name="shipping" value="S"> 
+				    <input type="hidden" name="custid" value="<%=session.getAttribute("SES_ID") %>"> 
+				
 		                    <div class="input-box">
 			                    <span class="details">Shipping Address</span>
 			                    <input type="text" name="address" >
