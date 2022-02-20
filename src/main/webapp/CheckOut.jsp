@@ -7,10 +7,6 @@
 <%@page import="java.sql.*"%>
 <%@page import="db.ConnectionManager" %>   
 <%
-	String driver = "oracle.jdbc.driver.OracleDriver";
-	
-	
-	
 	Connection con  = null;
 	Statement statement = null;
 	ResultSet resultSet, rs = null;
@@ -32,7 +28,7 @@
 		int orderID = 0;
 		
 		try{
-			con = DriverManager.getConnection();
+			con = ConnectionManager.getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO orderr(orderdate, ordertotalprice, custid) VALUES (to_date(SYSDATE),?,?)");   
 			ps.setDouble(1,totalPrice);
 			ps.setInt(2,custID);
