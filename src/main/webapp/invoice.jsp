@@ -3,6 +3,8 @@
 <%@ page import="java.sql.*" %>
 <%@page import="java.text.DecimalFormat" %>
 <%@page import="db.ConnectionManager" %>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
