@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 pageEncoding="ISO-8859-1"%>
 <%@page import="java.sql.*,java.util.*"%>
+<%@page import="db.ConnectionManager" %>
 
 <%
 String productid=request.getParameter("productid");
@@ -12,9 +13,8 @@ String productimages=request.getParameter("productimages");
 
 try
 {
-Class.forName("oracle.jdbc.driver.OracleDriver");
-Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE ", "tco","system");
-Statement st=conn.createStatement();
+Connection con = ConnectionManager.getConnection();    
+Statement st=con.createStatement();
 
 int i=st.executeUpdate("insert into product(productname,productsize,productprice,productdesc,productimages)values('"+productname+"','"+productsize+"','"+productprice+"','"+productdesc+"','"+productimages+"')");
 response.sendRedirect("productTable.jsp");
