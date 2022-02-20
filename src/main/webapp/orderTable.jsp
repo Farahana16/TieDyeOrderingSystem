@@ -9,11 +9,7 @@
 		<%@page import="db.ConnectionManager" %>
 		<%
 		String productid = request.getParameter("productid");
-		try {
-		//Class.forName(driver);
-		} catch (ClassNotFoundException e) {
-		e.printStackTrace();
-		}
+
 		Connection con = null;
 		Statement statement = null;
 		ResultSet resultSet = null;
