@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.mysql.jdbc.Statement;
+import db.ConnectionManager;
 
 /**
  * Servlet implementation class AddProductServlet
@@ -64,9 +65,8 @@ public class AddProductServlet extends HttpServlet {
 		
 		try 
 		{
-            Class.forName("org.postgresql.Driver");
             
-            Connection conn = DriverManager.getConnection("jdbc:postgresql://ec2-52-44-31-100.compute-1.amazonaws.com:5432/dffi4qvj2t1gsg","zssxxvgezboosc","260fd48ce298fbfd1a64f11a94813c5489c0e65e5c5d3dafbfb139e813b1c462");
+            Connection conn = ConnectionManager.getConnection();
             Statement st = (Statement) conn.createStatement();
            
             String sql = "insert into product (pID, pName, pDesc, pPics, price, pQty, cID) values('','"+pName+"','"+pDesc+"','-','"+price+"','"+pQty+"','"+cID+"')";
