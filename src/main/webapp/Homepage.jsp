@@ -7,6 +7,7 @@
 <%@page import="java.sql.Connection"%>
 <%@page import="java.text.DecimalFormat" %>
 <%@page import="db.ConnectionManager" %>
+
 <!DOCTYPE html>
 
 <%
@@ -27,10 +28,10 @@
 
 <html>
 <head>
-<title>Homepage</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/homepage.css">
+	<title>Homepage</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/homepage.css">
 </head> 
 
 <body>
