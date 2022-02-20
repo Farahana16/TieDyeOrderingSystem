@@ -5,6 +5,7 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
+
 <!DOCTYPE html>
 <% int custID = Integer.parseInt(request.getParameter("custID")); %>
 <html>
