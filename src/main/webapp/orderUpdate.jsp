@@ -17,7 +17,7 @@
 		<%
 		try{
 		Connection conn = ConnectionManager.getConnection();      
-		statement=connection.createStatement();
+		statement=conn.createStatement();
 		String sql ="select * from orderr where orderid="+orderid;
 		resultSet = statement.executeQuery(sql);
 		while(resultSet.next()){
