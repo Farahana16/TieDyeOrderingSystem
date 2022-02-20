@@ -5,22 +5,7 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="db.ConnectionManager" %>
-		<%
-		String productid = request.getParameter("productid");
-
-
-		Connection connection = null;
-		Statement statement = null;
-		ResultSet resultSet = null;
-		%>
-		<%
-		try{
-		connection = ConnectionManager.getConnection();      
 		
-		String sql ="select * from product where productid="+productid;
-		resultSet = statement.executeQuery(sql);
-		while(resultSet.next()){
-		%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +22,19 @@
 <body class="form-v10">
 	<div class="page-content">
 		<div class="form-v10-content">
-			
+			<%
+			String productid = request.getParameter("productid");
+
+			Connection connection = null;
+			Statement statement = null;
+			ResultSet resultSet = null;
+			try{
+			connection = ConnectionManager.getConnection();      
+
+			String sql ="select * from product where productid="+productid;
+			resultSet = statement.executeQuery(sql);
+			while(resultSet.next()){
+			%>
 			<form class="form-detail" action="updateProduct.jsp" method="post" id="myform">
 				<div class="form-right">
 					<h2>Update Product Details</h2>
@@ -53,7 +50,7 @@
 					</div>
 
 					<div class="form-row">
-						<input type="text" name="productprice" class="additional" id="productprice" value="<%=resultSet.getDouble("productprice") %>" required>
+						<input type="text" name="productprice" class="additional" id="productprice" value="<%=resultSet.getInt("productprice") %>" required>
 					</div>
 
 					<div class="form-row">
