@@ -53,11 +53,7 @@ public class RegisterServlet extends HttpServlet
              st.executeUpdate(sql);
              out.println("Data is Successfully Inserted into Seller Table");
                 }
- 		catch (ClassNotFoundException e) {
-
-               e.printStackTrace();
-
-         } catch (SQLException e) {
+           catch (SQLException e) {
 
                e.printStackTrace();
 
