@@ -29,7 +29,7 @@
 		
 		try{
 			con = ConnectionManager.getConnection();
-			PreparedStatement ps = con.prepareStatement("INSERT INTO orderr(orderdate, ordertotalprice, custid) VALUES (to_date(SYSDATE),?,?)");   
+			PreparedStatement ps = con.prepareStatement("INSERT INTO orderr(ordedate, ordertotalprice, custid) VALUES (to_date(SYSDATE),?,?)");   
 			ps.setDouble(1,totalPrice);
 			ps.setInt(2,custID);
 			
