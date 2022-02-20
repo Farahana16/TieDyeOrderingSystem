@@ -10,11 +10,6 @@
 	String driver = "oracle.jdbc.driver.OracleDriver";
 	
 	
-	try {
-		Class.forName(driver);
-	}catch (ClassNotFoundException e) {
-		e.printStackTrace();
-	}
 	
 	Connection con  = null;
 	Statement statement = null;
