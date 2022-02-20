@@ -55,14 +55,6 @@
 			ps = con.prepareStatement("DELETE FROM CARTITEMS WHERE CUSTID ='"+custID+"'"); 
 			ps.executeUpdate();
 			
-			statement = con.createStatement();
-			sql = "SELECT LAST_INSERT_ID() as orderID";
-			resultSet = statement.executeQuery(sql);
-			
-			if(resultSet.next()){
-				orderID = resultSet.getInt("orderID");
-			}
-			
 			response.sendRedirect("Payment.jsp?orderID=" + orderID +"&custID=" +custID);
 		}catch(Exception e){
 				System.out.println(e);
