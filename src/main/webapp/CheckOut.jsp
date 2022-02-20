@@ -20,7 +20,6 @@
 	<link rel="stylesheet" href="css/checkout.css">
 </head>
 <body>
-	ello
 	<%
 		//int custID = Integer.parseInt(request.getParameter("custID"));
 		double totalPrice = Double.parseDouble(request.getParameter("totalPrice"));
