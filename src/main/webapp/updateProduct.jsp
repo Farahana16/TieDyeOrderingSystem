@@ -15,7 +15,7 @@
 	int personID = Integer.parseInt(productid);
 	try
 	{
-	Connection con = ConnectionManager.getConnection();     
+	con = ConnectionManager.getConnection();     
 	String sql="Update product set productid=?,productname=?,productsize=?,productprice=?,productdesc=?,productimages=? where productid="+productid;
 	ps = con.prepareStatement(sql);
 	ps = con.prepareStatement(sql);
