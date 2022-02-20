@@ -16,7 +16,7 @@
 		<%
 		try{
 		connection = ConnectionManager.getConnection();      
-		statement=connection.createStatement();
+		
 		String sql ="select * from product where productid="+productid;
 		resultSet = statement.executeQuery(sql);
 		while(resultSet.next()){
