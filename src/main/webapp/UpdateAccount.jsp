@@ -4,6 +4,8 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="db.ConnectionManager"%>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
  	<head>
