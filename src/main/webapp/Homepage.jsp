@@ -17,7 +17,8 @@
 	double productPrice = 0.00;
 	String productSize = null;
 	String productDesc = null;
-	String custID = request.getParameter("custID");
+	String cid = request.getParameter("custID");
+	String custID = cid.substring(11, 13);
 	
 	session.setAttribute("SES_ID", custID);
  
