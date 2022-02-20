@@ -6,7 +6,7 @@ public class View {
 	private int orderid;
 	private String productname;
 	private String productsize;
-	private double productprice;
+	private int productprice;
 	private String productdesc;
 	private String image;
 	private String orderdate;
@@ -43,10 +43,10 @@ public class View {
 	public void setProductsize(String productsize) {
 		this.productsize = productsize;
 	}
-	public double getProductprice() {
+	public int getProductprice() {
 		return productprice;
 	}
-	public void setProductprice(double productprice) {
+	public void setProductprice(int productprice) {
 		this.productprice = productprice;
 	}
 	public String getProductdesc() {
