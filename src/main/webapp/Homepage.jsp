@@ -19,9 +19,9 @@
 	String productSize = null;
 	String productDesc = null;
 	String cid = request.getParameter("custID");
-	String custID = cid.substring(11, 13);
+	//String custID = cid.substring(11, 13);
 	
-	session.setAttribute("SES_ID", custID);
+	//session.setAttribute("SES_ID", custID);
  
 	Connection connection = null;
 	Statement statement = null;
@@ -39,9 +39,10 @@
 </head> 
 
 <body>
+	<%=cid%>
   <!-- GO TO TOP BUTTON -->
   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-level-up"></i></button>
-
+	
     <!-- SLIDE SHOW BACKGROUND AND MENU BAR -->
     <div class="slideshow-container">
         <div class ="menu-bar">
