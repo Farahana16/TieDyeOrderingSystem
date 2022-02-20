@@ -40,7 +40,7 @@ public class ViewOrderDAO {
 				c.setProductname(rs.getString("productname"));
 				c.setProductdesc(rs.getString("productdesc"));
 				c.setImage(rs.getString("productimages"));
-				//c.setOrderdate(rs.getDate("orderdate"));
+				//c.setOrderdate(rs.getString("orderdate"));
 				c.setProductprice(rs.getInt("productprice"));
 				c.setOrdertotalprice(rs.getDouble("ordertotalprice"));
 				
