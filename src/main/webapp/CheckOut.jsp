@@ -35,7 +35,7 @@
 			statement = con.createStatement();
 			String sql = "SELECT LAST_INSERT_ID";
 			resultSet = statement.executeQuery(sql);
-			int orderID = resultSet.getInt("LAST_INSERT_ID");
+			orderID = resultSet.getInt("LAST_INSERT_ID");
 			 
 			statement = con.createStatement();
 			sql = "SELECT productid from cartitems WHERE custid ='"+custID+"'";
@@ -45,7 +45,7 @@
 				int productid = resultSet.getInt("productid");
 				ps = con.prepareStatement("INSERT INTO orderdetails(productid, orderid) VALUES(?,?)");
 				ps.setInt(1, productid);
-				ps.setInt(2, orderid):
+				ps.setInt(2, orderID):
 				ps.executeUpdate();
 			}
 			
