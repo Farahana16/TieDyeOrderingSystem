@@ -53,7 +53,7 @@
 					</div>
 
 					<div class="form-row">
-						<input type="text" name="productprice" class="additional" id="productprice" value="<%=resultSet.getInt("productprice") %>" required>
+						<input type="text" name="productprice" class="additional" id="productprice" value="<%=resultSet.getDouble("productprice") %>" required>
 					</div>
 
 					<div class="form-row">
