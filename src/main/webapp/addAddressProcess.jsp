@@ -29,12 +29,14 @@
 			response.sendRedirect("billingAddress.jsp");
 		}
 		else if (shipping != null) {
-			String sql = "insert into shippingaddress(custshippingAddress, custshippingCity, custshippingState, custshippingPoscode, custID) values (?,?,?,?,'"+session.getAttribute("SES_ID")+"')";
+			//String sql = "insert into shippingaddress(custshippingAddress, custshippingCity, custshippingState, custshippingPoscode, custID) values (?,?,?,?,'"+session.getAttribute("SES_ID")+"')";
+			String sql = "insert into shippingaddress(custshippingAddress, custshippingCity, custshippingState, custshippingPoscode, custID) values (?,?,?,?,?)";
 			ps = con.prepareStatement(sql);
 			ps.setString(1, address);
 			ps.setString(2, city);
 			ps.setString(3, state);
 			ps.setInt(4, poscode);
+			ps.setInt(5, custid);
 			
 			int i = ps.executeUpdate();
 			response.sendRedirect("shippingAddress.jsp");
