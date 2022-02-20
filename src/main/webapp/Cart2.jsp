@@ -9,18 +9,7 @@
 <%@page import="db.ConnectionManager" %>
 
 <!DOCTYPE html>
-<%
-	String driver = "oracle.jdbc.driver.OracleDriver";
-	String connectionUrl = "jdbc:oracle:thin:@localhost:1521:XE ";
-	String userid = "taka2";
-	String password = "system";
-	
-	try {
-		Class.forName(driver);
-	}catch (ClassNotFoundException e) {
-		e.printStackTrace();
-	}
-	
+<%	
 	Connection con  = null;
 	Statement statement = null;
 	ResultSet resultSet, rs = null;
