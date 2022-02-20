@@ -157,7 +157,7 @@
 						try{
 						connection = ConnectionManager.getConnection();
 						statement=connection.createStatement();
-						String sql ="select * from feedback";
+						String sql ="select * from feedbacks";
 						resultSet = statement.executeQuery(sql);
 						while(resultSet.next()){
 						%>
