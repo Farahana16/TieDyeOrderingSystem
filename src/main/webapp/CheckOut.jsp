@@ -5,11 +5,10 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.sql.*"%>
+<%@page import="db.ConnectionManager" %>   
 <%
 	String driver = "oracle.jdbc.driver.OracleDriver";
-	String connectionUrl = "jdbc:oracle:thin:@localhost:1521:XE ";
-	String userid = "taka2";
-	String password = "system";
+	
 	
 	try {
 		Class.forName(driver);
@@ -38,7 +37,7 @@
 		int orderID = 0;
 		
 		try{
-			con = DriverManager.getConnection(connectionUrl, userid, password);
+			con = DriverManager.getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO orderr(orderdate, ordertotalprice, custid) VALUES (to_date(SYSDATE),?,?)");   
 			ps.setDouble(1,totalPrice);
 			ps.setInt(2,custID);
