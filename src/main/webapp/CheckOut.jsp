@@ -33,9 +33,12 @@
 			ps.executeUpdate();
 			
 			statement = con.createStatement();
-			String sql = "SELECT LAST_INSERT_ID";
+			String sql = "SELECT LAST_INSERT_ID() as orderID";
 			resultSet = statement.executeQuery(sql);
-			orderID = resultSet.getInt("LAST_INSERT_ID");
+			if(resultSet.next()){
+				orderID = resultSet.getInt("orderID");
+			}
+			
 			 
 			statement = con.createStatement();
 			sql = "SELECT productid from cartitems WHERE custid ='"+custID+"'";
@@ -53,7 +56,7 @@
 			ps.executeUpdate();
 			
 			statement = con.createStatement();
-			sql = "SELECT LAST_INSERT_ID as orderID";
+			sql = "SELECT LAST_INSERT_ID() as orderID";
 			resultSet = statement.executeQuery(sql);
 			
 			if(resultSet.next()){
