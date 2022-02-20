@@ -13,7 +13,7 @@
 			String password = "system";
 			try{  				
 				//create the connection object 
-				Connection con = DriverManager.getConnection(); 
+				Connection con = ConnectionManager.getConnection(); 
 				int productID = Integer.parseInt(request.getParameter("productID"));
 				int custID = Integer.parseInt(request.getParameter("custID")); 
 		
