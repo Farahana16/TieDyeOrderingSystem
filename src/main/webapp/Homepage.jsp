@@ -71,17 +71,17 @@
         <!-- SLIDE SHOW BACKGROUND -->
         <div class="mySlides fade">
           <div class="numbertext">1 / 3</div>
-          <img src="img/head1.jpg" style="width:100%; height:50%;">
+          <img src="images/head1.jpg" style="width:100%; height:50%;">
         </div>
         
         <div class="mySlides fade">
           <div class="numbertext">2 / 3</div>
-          <img src="img/head2.jpg" style="width:100%; height:50%;">
+          <img src="images/head2.jpg" style="width:100%; height:50%;">
         </div>
 
         <div class="mySlides fade">
           <div class="numbertext">3 / 3</div>
-          <img src="img/head3.png" style="width:100%; height:50%;">
+          <img src="images/head3.png" style="width:100%; height:50%;">
         </div>
         
         <br>
