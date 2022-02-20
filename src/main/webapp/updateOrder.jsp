@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ page import="java.sql.*" %>
-<%! String driverName = "oracle.jdbc.driver.OracleDriver";%>
-<%!String url = "jdbc:oracle:thin:@localhost:1521:XE";%>
-<%!String user = "tco";%>
-<%!String psw = "system";%>
+
+<%@page import="db.ConnectionManager" %>
 <%
 	int orderid = Integer.parseInt(request.getParameter("orderid"));
 	String orderdate=request.getParameter("orderdate");
@@ -15,8 +13,7 @@
 	try
 	{
 	
-	Class.forName(driverName);
-	con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE ", "tco","system");
+	Connection con = ConnectionManager.getConnection();  
 	String sql="Update ordert set orderid=?,orderdate=TO_DATE(?,'YYYY-MM-DD HH24:MI:SS'),ordertotalprice=?,custid=?,adminid=? where orderid="+orderid;
 	ps = con.prepareStatement(sql);
 	ps.setInt(1,orderid);
