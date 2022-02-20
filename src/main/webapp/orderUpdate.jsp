@@ -46,19 +46,19 @@
 					
 					
 					<div class="form-row">
-						<input type="hidden" name="orderid" class="street" id="orderid" value="<%=resultSet.getString("orderid")%>" >
+						<input type="hidden" name="orderid" class="street" id="orderid" value="<%=resultSet.getInt("orderid")%>" >
 					</div>
 
 					<div class="form-row">
-						<input type="text" name="orderdate" class="additional" id="orderdate" value="<%=resultSet.getString("orderdate") %>" required>
+						<input type="text" name="orderdate" class="additional" id="orderdate" value="<%=resultSet.getDate("ordedate") %>" required>
 					</div>
 
 					<div class="form-row">
-						<input type="text" name="ordertotalprice" class="additional" id="ordertotalprice" value="<%=resultSet.getInt("ordertotalprice") %>" required>
+						<input type="text" name="ordertotalprice" class="additional" id="ordertotalprice" value="<%=resultSet.getDouble("ordertotalprice") %>" required>
 					</div>
 
 					<div class="form-row">
-						<input type="text" name="custid" class="additional" id="productdesc" value="<%=resultSet.getString("custid") %>" readonly>
+						<input type="text" name="custid" class="additional" id="productdesc" value="<%=resultSet.getInt("custid") %>" readonly>
 					</div>
 					
 					<div class="form-row">
