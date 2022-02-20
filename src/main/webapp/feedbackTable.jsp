@@ -162,12 +162,12 @@
 						while(resultSet.next()){
 						%>
 								<tr>
-									<td class="column2"><%=resultSet.getString("feedbackid") %></td>
+									<td class="column2"><%=resultSet.getInt("feedbackid") %></td>
 									<td class="column2"><%=resultSet.getString("feedbackrating") %></td>
 									<td class="column2"><%=resultSet.getString("feedbackcomment") %></td>
 									<td class="column2"><%=resultSet.getInt("orderid") %></td>
 									<td class="column4">
-										<a href="deleteFeedback.jsp?feedbackid=<%=resultSet.getString("feedbackid") %>"><button class="btn"><i class="fa fa-trash"></i></button></a>
+										<a href="deleteFeedback.jsp?feedbackid=<%=resultSet.getInt("feedbackid") %>"><button class="btn"><i class="fa fa-trash"></i></button></a>
 									</td>
 								</tr>
 						<%
