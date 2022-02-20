@@ -13,7 +13,7 @@
 	try
 	{
 	
-	Connection con = ConnectionManager.getConnection();  
+	con = ConnectionManager.getConnection();  
 	String sql="Update orderr set orderid=?,ordedate=SYSDATE(),ordertotalprice=?,custid=?,adminid=? where orderid="+orderid;
 	ps = con.prepareStatement(sql);
 	ps.setInt(1,orderid);
