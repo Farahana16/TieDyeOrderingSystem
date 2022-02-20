@@ -77,10 +77,6 @@ public class AddProductServlet extends HttpServlet {
             out.println("</script>");
         	response.sendRedirect("product.jsp");
         }
-		catch (ClassNotFoundException e) 
-		{
-			e.printStackTrace();
-        } 
 		catch (SQLException e) 
 		{
             e.printStackTrace();
