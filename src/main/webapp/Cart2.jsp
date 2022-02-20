@@ -62,14 +62,6 @@
                    			productSize = resultSet.getString("productSize");
                    			productDesc = resultSet.getString("productDesc");
                    			totalPrice = totalPrice + productPrice;
-                   			/*billingAddress = resultSet.getString("custbillingAddress");
-                   			billingPoscode = resultSet.getString("custbillingPoscode");
-                   			billingCity = resultSet.getString("custbillingCity");
-                   			billingState = resultSet.getString("custbillingState");
-                   			shippingAddress = resultSet.getString("custshippingAddress");
-                   			shippingPoscode = resultSet.getString("custshippingPoscode");
-                   			shippingCity = resultSet.getString("custshippingCity");
-                   			shippingState = resultSet.getString("custshippingState");
                    			
                 %>
                 <tr>
