@@ -1,7 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%> 
 <%@page import="java.sql.*" %>
 <%@page import="java.util.*"%>
-<%@page import="adminregister.db.ConnectionManager"%>
 <%@page import="adminregister.model.adminregister"%>
 <%@page import="db.ConnectionManager" %>
 <!DOCTYPE html>
