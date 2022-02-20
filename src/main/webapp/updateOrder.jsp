@@ -14,7 +14,7 @@
 	{
 	
 	Connection con = ConnectionManager.getConnection();  
-	String sql="Update orderr set orderid=?,ordedate=TO_DATE(?,'YYYY-MM-DD HH24:MI:SS'),ordertotalprice=?,custid=?,adminid=? where orderid="+orderid;
+	String sql="Update orderr set orderid=?,ordedate=SYSDATE(),ordertotalprice=?,custid=?,adminid=? where orderid="+orderid;
 	ps = con.prepareStatement(sql);
 	ps.setInt(1,orderid);
 	ps.setString(2, orderdate);
