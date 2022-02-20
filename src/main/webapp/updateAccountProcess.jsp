@@ -12,6 +12,7 @@
 	try
 	{
 		Connection con = ConnectionManager.getConnection();
+		PreparedStatement ps = null;
 		String sql = "Update customer set custUsername=?, custEmail=?, custPhoneNum=?, custPwd=? where custid="+session.getAttribute("SES_ID");
 		ps = con.prepareStatement(sql);
 		ps.setString(1, username);
