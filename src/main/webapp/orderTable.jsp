@@ -161,7 +161,7 @@
 						<tbody>
 						<%
 						try{
-						Connection con = ConnectionManager.getConnection();   
+						con = ConnectionManager.getConnection();   
 						//connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE ", "tco","system");
 						statement=con.createStatement();
 						String sql ="select * from orderr";
