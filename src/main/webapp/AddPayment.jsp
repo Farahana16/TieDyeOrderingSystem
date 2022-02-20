@@ -20,7 +20,7 @@
            	 try{
         		Connection con = ConnectionManager.getConnection();              
 
-           	 	PreparedStatement ps = con.prepareStatement("insert into payment(paymentTotalPrice, paymentDate, paymentMethod, orderID)values(?,to_date(SYSDATE),?,?)");          	 
+           	 	PreparedStatement ps = con.prepareStatement("insert into payment(paymentTotalPrice, paymentDate, paymentMethod, orderID)values(?,SYSDATE(),?,?)");          	 
         		ps.setDouble(1,totprice);
         		ps.setString(2,pm);
         		ps.setInt(3,oid);
