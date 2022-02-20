@@ -11,7 +11,7 @@
 	int shippingID = Integer.parseInt(request.getParameter("shippingID"));
 		
 	Connection con = ConnectionManager.getConnection();
-	
+	PreparedStatement ps = null;
 	try
 	{
 		if(billingID != 0){
