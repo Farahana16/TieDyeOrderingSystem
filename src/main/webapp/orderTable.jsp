@@ -165,7 +165,7 @@
 						%>
 								<tr>
 									<td class="column2"><%=resultSet.getInt("orderID") %></td>
-									<td class="column2"><%=resultSet.getDate("orderDate") %></td>
+									<td class="column2"><%=resultSet.getDate("ordeDate") %></td>
 									<td class="column2"><%=resultSet.getDouble("orderTotalPrice") %></td>
 									<td class="column2"><%=resultSet.getInt("custID") %></td>
 									<td class="column3"><%=resultSet.getInt("adminID") %></td>
