@@ -14,7 +14,7 @@
 				
 				
 				//create the connection object 
-				Connection con=DriverManager.getConnection(); 
+				Connection con = ConnectionManager.getConnection();      
 				//create the statement object 
 				Statement stmt=con.createStatement(); 
 				String sql = "SELECT * FROM admin WHERE adminusername = '" + username + "' AND adminpwd = '" + pass + "'";
