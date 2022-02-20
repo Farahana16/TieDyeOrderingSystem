@@ -18,6 +18,8 @@
 	String productSize = null;
 	String productDesc = null;
 	String custID = request.getParameter("custID");
+	
+	session.setAttribute("SES_ID", custID);
  
 	Connection connection = null;
 	Statement statement = null;
