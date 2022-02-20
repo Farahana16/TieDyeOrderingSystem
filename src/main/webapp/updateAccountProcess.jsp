@@ -8,7 +8,7 @@
 	String pwd = request.getParameter("custPwd");
 		
 	Connection con = ConnectionManager.getConnection();
-	PreparedStatement ps = null;
+
 	try
 	{
 	
