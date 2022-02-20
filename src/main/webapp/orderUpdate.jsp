@@ -10,13 +10,13 @@
 		String adminid = request.getParameter("SES_ID");
 		String orderid = request.getParameter("orderid");
 	
-		Connection connection = null;
+		
 		Statement statement = null;
 		ResultSet resultSet = null;
 		%>
 		<%
 		try{
-		connection = DriverManager.getConnection();
+		Connection con = ConnectionManager.getConnection();      
 		statement=connection.createStatement();
 		String sql ="select * from ordert where orderid="+orderid;
 		resultSet = statement.executeQuery(sql);
