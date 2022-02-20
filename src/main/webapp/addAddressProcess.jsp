@@ -6,6 +6,7 @@
 	String city = request.getParameter("city");
 	String state = request.getParameter("state");
 	int poscode = Integer.parseInt(request.getParameter("poscode"));
+	int custid = Integer.parseInt(request.getParameter("custid"));
 	
 	String billing = request.getParameter("billing");
 	String shipping = request.getParameter("shipping");
@@ -15,12 +16,14 @@
 	try
 	{
 		if(billing != null){
-			String sql = "insert into billingaddress(custbillingAddress, custbillingCity, custbillingState, custbillingPoscode, custID) values (?,?,?,?,'"+session.getAttribute("SES_ID")+"')";
+			//String sql = "insert into billingaddress(custbillingAddress, custbillingCity, custbillingState, custbillingPoscode, custID) values (?,?,?,?,'"+session.getAttribute("SES_ID")+"')";
+			String sql = "insert into billingaddress(custbillingAddress, custbillingCity, custbillingState, custbillingPoscode, custID) values (?,?,?,?,?)";
 			ps = con.prepareStatement(sql);
 			ps.setString(1, address);
 			ps.setString(2, city);
 			ps.setString(3, state);
 			ps.setInt(4, poscode);
+			ps.setInt(5, custid);
 			
 			int i = ps.executeUpdate();
 			response.sendRedirect("billingAddress.jsp");
