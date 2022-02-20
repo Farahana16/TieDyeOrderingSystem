@@ -98,7 +98,7 @@
 						try{
 						connection = ConnectionManager.getConnection();
 						statement=connection.createStatement();
-						String sql ="select * from ordert";
+						String sql ="select * from orderr";
 						resultSet = statement.executeQuery(sql);
 						if(resultSet.next()){
 						%>
