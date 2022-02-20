@@ -36,13 +36,7 @@
                        
                        		Connection con = null;
                        		ResultSet rs = null;
-                       		int orderID = Integer.parseInt(request.getParameter("orderID"));
-                        		
-                        	try{        		
-                        		Class.forName("oracle.jdbc.driver.OracleDriver");
-                        	}catch(ClassNotFoundException e){
-                        		e.printStackTrace();
-                        	}
+                       		int orderID = Integer.parseInt(request.getParameter("orderID"));             
                         	
                         	try{
                         		con = ConnectionManager.getConnection();              
