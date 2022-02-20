@@ -5,7 +5,7 @@
 <%
 	int orderid = Integer.parseInt(request.getParameter("orderid"));
 	String ordedate=request.getParameter("orderdate");
-	int ordertotalprice=Integer.parseInt(request.getParameter("ordertotalprice"));
+	double ordertotalprice=Double.parseDouble(request.getParameter("ordertotalprice"));
 	int custid=Integer.parseInt(request.getParameter("custid"));
 	int adminid=Integer.parseInt(request.getParameter("adminid"));
 	Connection con = null;
