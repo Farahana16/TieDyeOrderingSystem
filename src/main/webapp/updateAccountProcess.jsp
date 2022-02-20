@@ -7,11 +7,11 @@
 	String phonenum = request.getParameter("custPhoneNum");
 	String pwd = request.getParameter("custPwd");
 		
-	Connection con = ConnectionManager.getConnection();
+	
 
 	try
 	{
-	
+		Connection con = ConnectionManager.getConnection();
 		String sql = "Update customer set custUsername=?, custEmail=?, custPhoneNum=?, custPwd=? where custid="+session.getAttribute("SES_ID");
 		ps = con.prepareStatement(sql);
 		ps.setString(1, username);
