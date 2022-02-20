@@ -17,7 +17,7 @@
 	String sql="Update orderr set orderid=?,ordedate=SYSDATE(),ordertotalprice=?,custid=?,adminid=? where orderid="+orderid;
 	ps = con.prepareStatement(sql);
 	ps.setInt(1,orderid);
-	ps.setInt(2, ordertotalprice);
+	ps.setDouble(2, ordertotalprice);
 	ps.setInt(3, custid);
 	ps.setInt(4, adminid);
 	int i = ps.executeUpdate();
