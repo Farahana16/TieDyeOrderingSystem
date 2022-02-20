@@ -158,20 +158,19 @@
 						<%
 						try{
 						con = ConnectionManager.getConnection();   
-						//connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE ", "tco","system");
 						statement=con.createStatement();
 						String sql ="select * from orderr";
 						resultSet = statement.executeQuery(sql);
 						while(resultSet.next()){
 						%>
 								<tr>
-									<td class="column2"><%=resultSet.getString("orderid") %></td>
-									<td class="column2"><%=resultSet.getString("orderdate") %></td>
-									<td class="column2"><%=resultSet.getString("ordertotalprice") %></td>
-									<td class="column2"><%=resultSet.getInt("custid") %></td>
-									<td class="column3"><%=resultSet.getString("adminid") %></td>
+									<td class="column2"><%=resultSet.getInt("orderID") %></td>
+									<td class="column2"><%=resultSet.getString("orderDate") %></td>
+									<td class="column2"><%=resultSet.getDouble("orderTotalPrice") %></td>
+									<td class="column2"><%=resultSet.getInt("custID") %></td>
+									<td class="column3"><%=resultSet.getInt("adminID") %></td>
 									<td class="column4">
-										<a href="orderUpdate.jsp?orderid=<%=resultSet.getString("orderid") %>"><button class="btn"><i class="fa fa-pencil"></i></button></a>
+										<a href="orderUpdate.jsp?orderid=<%=resultSet.getInt("orderid") %>"><button class="btn"><i class="fa fa-pencil"></i></button></a>
 									</td>
 								</tr>
 						<%
