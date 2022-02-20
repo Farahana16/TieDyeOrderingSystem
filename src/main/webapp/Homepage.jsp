@@ -18,7 +18,7 @@
 	double productPrice = 0.00;
 	String productSize = null;
 	String productDesc = null;
-	String cid = request.getParameter("custID");
+	String custID = request.getParameter("custID");
 	//String custID = cid.substring(11, 13);
 	
 	//session.setAttribute("SES_ID", custID);
@@ -39,7 +39,7 @@
 </head> 
 
 <body>
-	<%=cid%>
+	<%=custID%>
   <!-- GO TO TOP BUTTON -->
   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-level-up"></i></button>
 	
