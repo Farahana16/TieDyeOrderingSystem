@@ -68,7 +68,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 					</span>
 				</div>
 				<div class="text-center">
-					<a href="SignUp.jsp" class="txt2 hov1">
+					<a href="https://tco-microservices.herokuapp.com/" class="txt2 hov1">
 						Sign Up
 					</a>
 				</div>
