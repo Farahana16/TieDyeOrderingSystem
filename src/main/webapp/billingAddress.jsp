@@ -71,7 +71,8 @@
                     	<form action="addAddressProcess.jsp" method="post">  
 			    		<div class="user-details">
 			    			                               
-		                    <input type="hidden" name="billing" value="B">                    
+		                    <input type="hidden" name="billing" value="B">
+				    <input type="hidden" name="custid" value="<%=session.getAttribute("SES_ID") %>"> 
 
 		                    <div class="input-box">
 			                    <span class="details">Billing Address</span>
