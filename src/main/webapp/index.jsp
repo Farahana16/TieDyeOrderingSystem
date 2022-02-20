@@ -72,6 +72,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 						Sign Up
 					</a>
 				</div>
+				<div class="text-center">
+					<a href="adminIndex.html" class="txt2 hov1">
+						Admin Sign In
+					</a>
+				</div>
 			</form>
 		</div>
 	</div>
