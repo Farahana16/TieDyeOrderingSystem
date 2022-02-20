@@ -47,8 +47,7 @@
 						<table>
 							<tr>
 								<td>
-									<b>Tracking No:</b> Our admin will update this later<br />
-									<b>Date:</b> <%=resultSet.getString("orderDate")%>
+									<b>Date:</b> <%=resultSet.getDate("ordeDate")%>
 								</td>
 							</tr>
 						</table>
