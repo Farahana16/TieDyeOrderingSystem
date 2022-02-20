@@ -25,7 +25,7 @@ public class ViewOrderDAO {
 		try {
 			con = ConnectionManager.getConnection();
 			
-			PreparedStatement ps = con.prepareStatement("SELECT p.*, o.* FROM product p join orderdetails od on od.productid = p.productid join orderr o on o.orderid = od.orderid where o.custid =? order by o.orderid");
+			PreparedStatement ps = con.prepareStatement("SELECT p.*, o.* FROM product p join orderdetails od on p.productid = od.productid join orderr o on o.orderid = od.orderid where o.custid =? order by o.orderid");
 			ps.setInt(1, custID);
 			
 			
@@ -40,8 +40,8 @@ public class ViewOrderDAO {
 				c.setProductname(rs.getString("productname"));
 				c.setProductdesc(rs.getString("productdesc"));
 				c.setImage(rs.getString("productimages"));
-				//c.setOrderdate(rs.getString("orderdate"));
-				c.setProductprice(rs.getDouble("productprice"));
+				//c.setOrderdate(rs.getDate("orderdate"));
+				c.setProductprice(rs.getInt("productprice"));
 				c.setOrdertotalprice(rs.getDouble("ordertotalprice"));
 				
 				view.add(c);
@@ -79,7 +79,7 @@ public class ViewOrderDAO {
 			c.setProductdesc(rs.getString("productdesc"));
 			//c.setImage(rs.getString("image"));
 			//c.setOrderdate(rs.getString("orderdate"));
-			c.setProductprice(rs.getDouble("productprice"));
+			c.setProductprice(rs.getInt("productprice"));
 			c.setOrdertotalprice(rs.getDouble("ordertotalprice"));
 		}
 		
