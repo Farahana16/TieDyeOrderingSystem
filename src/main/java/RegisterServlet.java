@@ -7,6 +7,7 @@ import java.sql.Statement;
 import javax.servlet.*;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
+import db.ConnectionManager;
 
 
 @WebServlet("/RegisterServlet")
@@ -44,11 +45,7 @@ public class RegisterServlet extends HttpServlet
     	 out.println("</body></html>");
     
  		try {
-
-             Class.forName("org.postgresql.Driver");
-
-             Connection conn = DriverManager.getConnection("jdbc:postgresql://ec2-52-44-31-100.compute-1.amazonaws.com:5432/dffi4qvj2t1gsg","zssxxvgezboosc","260fd48ce298fbfd1a64f11a94813c5489c0e65e5c5d3dafbfb139e813b1c462");
-
+             Connection conn = ConnectionManager.getConnection();
              Statement st = conn.createStatement();
             
              String sql = "insert into seller (sName, shopName, passw, sEmail, accNo, aID) values('"+username+"','-','"+password+"','"+email+"','-','-')";
