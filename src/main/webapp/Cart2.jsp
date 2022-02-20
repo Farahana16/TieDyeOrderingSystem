@@ -50,7 +50,7 @@
             <table>
                 <%
                     try{
-                    	Connection con = ConnectionManager.getConnection();
+                    	con = ConnectionManager.getConnection();
                         statement = con.createStatement();
                         String sql ="SELECT c.*, p.* from customer c join cartitems ca on ca.custID = c.custID join product p on ca.productID = p.productID where c.custID = '"+custID+"'";
                         resultSet = statement.executeQuery(sql);
