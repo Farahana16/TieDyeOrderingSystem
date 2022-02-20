@@ -17,7 +17,7 @@
 	double productPrice = 0.00;
 	String productSize = null;
 	String productDesc = null;
-	int custID = Integer.parseInt(request.getParameter("custID"));
+	String custID = request.getParameter("custID");
  
 	Connection connection = null;
 	Statement statement = null;
