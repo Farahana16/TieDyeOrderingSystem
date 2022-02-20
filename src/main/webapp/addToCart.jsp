@@ -7,10 +7,6 @@
 <html>
 	<body>
 		<%
-			String driver = "oracle.jdbc.driver.OracleDriver";
-			String connectionUrl = "jdbc:oracle:thin:@localhost:1521:XE ";
-			String userid = "taka2";
-			String password = "system";
 			try{  				
 				//create the connection object 
 				Connection con = ConnectionManager.getConnection(); 
