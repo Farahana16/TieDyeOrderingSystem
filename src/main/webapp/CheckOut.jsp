@@ -45,7 +45,7 @@
 				int productid = resultSet.getInt("productid");
 				ps = con.prepareStatement("INSERT INTO orderdetails(productid, orderid) VALUES(?,?)");
 				ps.setInt(1, productid);
-				ps.setInt(2, orderID):
+				ps.setInt(2, orderID);
 				ps.executeUpdate();
 			}
 			
@@ -53,7 +53,7 @@
 			ps.executeUpdate();
 			
 			statement = con.createStatement();
-			sql = "SELECT LAST_INSERT_ID as orderID from dual";
+			sql = "SELECT LAST_INSERT_ID as orderID";
 			resultSet = statement.executeQuery(sql);
 			
 			if(resultSet.next()){
