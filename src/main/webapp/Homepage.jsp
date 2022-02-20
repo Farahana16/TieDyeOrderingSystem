@@ -7,7 +7,6 @@
 <%@page import="java.sql.Connection"%>
 <%@page import="java.text.DecimalFormat" %>
 <%@page import="db.ConnectionManager" %>
-<@page import="java.lang.*"%>
 
 <!DOCTYPE html>
 
@@ -18,11 +17,8 @@
 	double productPrice = 0.00;
 	String productSize = null;
 	String productDesc = null;
-	String custID = request.getParameter("custID");
-	//String custID = cid.substring(11, 13);
-	
-	//session.setAttribute("SES_ID", custID);
- 
+	int custID = Integer.parseInt(request.getParameter("custID"));
+
 	Connection connection = null;
 	Statement statement = null;
 	ResultSet resultSet = null;
@@ -39,7 +35,6 @@
 </head> 
 
 <body>
-	<%=custID%>
   <!-- GO TO TOP BUTTON -->
   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-level-up"></i></button>
 	
