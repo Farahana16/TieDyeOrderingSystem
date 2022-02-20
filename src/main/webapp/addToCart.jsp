@@ -1,5 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%> 
 <%@page import="java.sql.*" %>
+<<%@page import="db.ConnectionManager"%>
+
+
 <!DOCTYPE html>
 <html>
 	<body>
@@ -13,7 +16,7 @@
 				Class.forName(driver); 
 				
 				//create the connection object 
-				Connection con = DriverManager.getConnection(connectionUrl, userid, password); 
+				Connection con = DriverManager.getConnection(); 
 				int productID = Integer.parseInt(request.getParameter("productID"));
 				int custID = Integer.parseInt(request.getParameter("custID")); 
 		
