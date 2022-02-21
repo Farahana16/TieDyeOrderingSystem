@@ -302,7 +302,7 @@
         <div class="column">
           <h4>Size : <c:out value="${c.productsize}"/></h4>
           <h4>Description : <c:out value="${c.productdesc}"/></h4>
-          <h4>Price :RM <c:out value="${c.productprice}"/>0</h4>
+          <h4>Price :RM <c:out value="${c.productprice}"/></h4>
           <button><a id="${c.productid}" href="addFeedback.jsp?custID=<%=custID%>&orderID=${c.orderid}" style="text-decoration:none;'">Add Feedback</a></button>
         </div>
       </div>
