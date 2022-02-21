@@ -72,7 +72,6 @@
                         RM <%=format.format(productPrice)%><br><br>
                         Size: <%=productSize %> <br>
                         Description: <%=productDesc %> <br>
-                        Quantity: 1
                     </td>
                 </tr> 
                  <%
