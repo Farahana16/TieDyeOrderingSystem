@@ -47,7 +47,7 @@
 		                                
 		                    <div class="input-box">
 			                    <span class="details">Phone Number</span>
-			                    <input type="text" value="0<%=resultSet.getString("custPhoneNum") %>"  name="custPhoneNum" >
+			                    <input type="text" value="<%=resultSet.getString("custPhoneNum") %>"  name="custPhoneNum" >
 		                    </div>
 		                                
 		                    <div class="input-box">
